@@ -8,30 +8,10 @@
 }
 .wrapper h1{
     font-family: var(--font-family);
-    font-size: 70px;
+    font-size: 50px;
     margin-bottom: 65px;
     text-align: center;
     padding-right: 150px; 
-}
-.wrapper h2{
-    font-family: var(--font-family);
-    font-size: 30px;
-    
-    text-align: center;
-  
-}
-.wrapper h2{
-    font-family: var(--font-family);
-    font-size: 30px;
-    
-    text-align: center;
-  
-}
-.content{
-    font-family: var(--font-family);
-    font-size: 20px;
-    
-    text-align: left;
 }
 .accordion{
     width:500px;
@@ -52,7 +32,10 @@
   }
   .content{
     color: purple;
+    font-family: var(--font-family);
+    font-size: 20px;
     max-height:0;
+    text-align: center;
     overflow:hidden;
     transition: all 0.5s cubic-bezier(0,1,0,1);
   }

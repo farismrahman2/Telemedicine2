@@ -5,7 +5,7 @@ import grey from '../../assets/grey.jpg'
 import richardwebber from '../../assets/richardwebber.jpg'
 
 const Ourdoctors = () => {
-  return <div class="wrapper section__margin">
+  return <div class="wrapper section__margin" id = 'doctors'>
   <h1 className='gradienttext'> Our Doctors</h1>
 
 
