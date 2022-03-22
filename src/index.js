@@ -5,9 +5,9 @@ import App from './App';
 import {
   BrowserRouter,
   Routes,
-  Route,
+  Route
 } from "react-router-dom";
-import { Admin } from './containers';
+import { Admin, Zoom } from './containers';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +15,7 @@ ReactDOM.render(
     <BrowserRouter>
     <Routes>
         <Route path='/control' element={<Admin />} />
+        <Route path="/call" element={<Zoom />} />
         <Route path="/" element={<App />}>
       </Route>
     </Routes>

@@ -7,4 +7,4 @@ export {default as What} from './what/what';
 export {default as Ourdoctors} from './ourdoctors/ourdoctors';
 export {default as Admin} from './admin/admin';
 export {default as ContactUs} from './contactus/contactus';
-
+export {default as Zoom} from './zoom/zoom'

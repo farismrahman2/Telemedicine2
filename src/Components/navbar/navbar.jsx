@@ -13,12 +13,9 @@ const Navbar = () => {
         <h3 className='navbar-links_logo'>Logo</h3>
       </div>
       <div className='navbar_links_container'>
-        <p><a href='#home'> Home</a></p>
-
-        
+        <p><a href='#home'> Home</a></p>        
         <p><a href='/control'> Admin</a></p>
-        <p><a href='#home'> </a></p>
-
+        <p><a href='/call'>Conference</a></p>
         <ScrollIntoView selector="#what">
         <p><a href ='#what'> What We Treat</a></p>
         </ScrollIntoView>  
