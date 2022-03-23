@@ -4,10 +4,17 @@ import './navbar.css';
 import { Link } from 'react-router-dom';
 import { RiMenu3Line, RiCloseLin } from 'react-icons/ri';
 import logo from '../../assets/logo.png'
+import { AnimatePresence, motion } from 'framer-motion';
+import Signup from '../login/signup';
 
 const Navbar = () => {
-  
+  const [showModal,setShowModal]=useState(false);
+
   return <div className='navbar'>
+
+  <Signup showModal={showModal} setShowModal ={setShowModal}/>
+< AnimatePresence exitBeforeEnter onExitComplete={()=>setShowModal(false) }/>
+    
     <div className='navbar-links'>
       <div >
         <h3 className='navbar-links_logo'></h3>
@@ -34,7 +41,14 @@ const Navbar = () => {
 
           Sign in
         </p>
-        <button type="button"> Sign Up</button>
+        <motion.div className='sign_up'
+    whileHover={{duration:'0',delay:0,scale:1.3}}
+    initial={{x:'0'}}
+    animate={{x:'0'}}
+    >
+    
+    <button onClick={()=> setShowModal(true)}>Sign up</button>
+    </motion.div>
       </div>
       <div className='navbar-menu'>
         </div>
