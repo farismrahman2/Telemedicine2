@@ -20,7 +20,7 @@ const Navbar = () => {
         <p><a href='#home'> </a></p>
 
         <ScrollIntoView selector="#what">
-        <p><a href ='#what'> What We Treat</a></p>
+        <p><a href ='#whatWe'> What We Treat</a></p>
         </ScrollIntoView>  
         <p><a href='#possibility'> Help</a></p> 
         <p><a href='#home'> (202) 231-4322</a></p> 

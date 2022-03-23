@@ -5,7 +5,7 @@ import './brand.css';
 const Brand = () => {
   return (
     <div className='section'>
-    <div className='whatis section__margin' id='#what'>
+    <div className='whatis section__margin' id='what'>
       <div className='what-feature'>
        
 
