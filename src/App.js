@@ -4,13 +4,17 @@ import MessengerCustomerChat from 'react-messenger-customer-chat';
 import {Appointment,  Brand, Cta, Navbar } from './Components';
 import { Footer, Blog, Header, What, Possibility, Ourdoctors, ContactUs, Admin, Zoom } from './containers';
 
-import React,{useState} from 'react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 const App = () => {
 
   const [showModal,setShowModal]=useState(false);
   return (
-    <div className="App">
+      <div className="App">
+          <Helmet>
+              <title>Telemedicine</title>
+          </Helmet>
       <div className="gradientbg">
         <Navbar/>        
         <Header/>
