@@ -18,7 +18,7 @@ const Navbar = () => {
         <p><a href='/control'> Admin</a></p>
         <p><a href='/call'>Conference</a></p>
         <ScrollIntoView selector="#what">
-        <p><a href ='#what'> What We Treat</a></p>
+        <p><a href ='#whatWe'> What We Treat</a></p>
         </ScrollIntoView>  
         <p><a href='#possibility'> Help</a></p>
         <ScrollIntoView selector="#contactus">
