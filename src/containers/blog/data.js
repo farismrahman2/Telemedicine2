@@ -1,18 +1,18 @@
 export const data = [
-    {
-       question: 'Question 1',
-       answer: 'I only enjoy window shopping when the windows are transparent.', 
+   {
+      question: 'Can an Online Doctor Diagnose You?',
+      answer: 'Yes you can! When visiting a Doctor online, the patient may receive an online diagnosis and prescription (as needed) from the convenience of their home.', 
+   },
+   {
+       question: 'What is the Video Quality?',
+       answer: 'The video quality of a telemdicine is affected by both the patient\'s WIFI and the doctor\'s WIFI.', 
     },
     {
-        question: 'Question 2',
-        answer: 'Facing his greatest fear, he ate his first marshmallow.', 
-     },
-     {
-        question: 'Question 3',
-        answer: 'The Great Dane looked more like a horse than a dog. Input more information to explain the question even more because the user will need to know!', 
-     },
-     {
-        question: 'Question 4',
-        answer: 'The Great Dane looked more like a horse than a dog.', 
-     }
+       question: 'Is this platform secure and HIPAA compliant?',
+       answer: 'Yes. This platform is 100% secure and HIPAA complient with the main intention of protecting the patient\'s infortmation and ensuring security in the healthcare space.', 
+    },
+    {
+       question: 'What will an Online Appoitnment look like?',
+       answer: 'The Patient and Doctor will connect over video, in this case, Microsoft Teams. We suggest that onlline meetings are made for non-urgent care.', 
+    }
 ];

@@ -10,7 +10,8 @@ const Navbar = () => {
   return <div className='navbar'>
     <div className='navbar-links'>
       <div >
-        <h3 className='navbar-links_logo'>Logo</h3>
+        <h3 className='navbar-links_logo'></h3>
+        <img src={logo} alt="logo" width={40}></img>
       </div>
       <div className='navbar_links_container'>
         <p><a href='#home'> Home</a></p>        
@@ -19,8 +20,7 @@ const Navbar = () => {
         <ScrollIntoView selector="#what">
         <p><a href ='#what'> What We Treat</a></p>
         </ScrollIntoView>  
-        <p><a href='#possibility'> Help</a></p> 
-        <p><a href='#home'> (202) 231-4322</a></p> 
+        <p><a href='#possibility'> Help</a></p>
         <ScrollIntoView selector="#contactus">
         <p><a href='#contactus'>  Contact Us </a></p>
        </ScrollIntoView>
