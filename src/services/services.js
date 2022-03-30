@@ -1,6 +1,6 @@
-const backendUrl = 'http://localhost:5555/app/'
-
-declare var ZoomMtgEmbedded
+import ZoomMtgEmbedded from '@zoomus/websdk/embedded';
+const signatureUrl = "http://localhost:4000/";
+const backendUrl = 'http://localhost:5555/app/';
 
 const postContact =(data)=>{
   fetch(backendUrl+'contact', {
@@ -45,30 +45,28 @@ const deleteAppointmentById = (id) => {
 }
 
 const getSignature = (meetingNumber, role, userName, userEmail, passWord, registrantToken) => {
-    const signatureEndpoint = `${backendUrl}signature/`
     let data = {
         meetingNumber: meetingNumber,
         role: role
     }
 
-    return fetch(signatureEndpoint, {
+    return fetch(signatureUrl, {
         method: 'POST',
         header: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
-    }).then(res => {
+    }).then(res => res.json()).then(response => {
         debugger
-        res.json()
-    }).then(response => {
-        startMeeting(response.signature, meetingNumber,userName, userEmail, passWord, registrantToken)
+        startMeeting(response.signature, meetingNumber, userName, userEmail, passWord, registrantToken)
     }).catch(error => {
       console.log(error)
     })
 }
 
-function startMeeting(signature, meetingNumber, userName, userEmail, passWord, registrantToken) {
-  let meetingSDKElement = document.getElementById('meetingSDKElement')
-    const apiKey = 'QPSsutvqQZCO_K205pUfKQ'
-    const client = ZoomMtgEmbedded.createClient();
+const startMeeting = (signature, meetingNumber, userName, userEmail, passWord, registrantToken) => {
+    let meetingSDKElement = document.getElementById('meetingSDKElement');
+    debugger
+    const apiKey = 'QPSsutvqQZCO_K205pUfKQ';
+    let client = ZoomMtgEmbedded.createClient();
 
   client.init({
     debug: true,
@@ -101,7 +99,7 @@ function startMeeting(signature, meetingNumber, userName, userEmail, passWord, r
   })
 }
 
-module.exports = {
+export {
   postContact, postAppointment,
   getContact, getAppointment,
   deleteContactById, deleteAppointmentById,

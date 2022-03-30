@@ -24,6 +24,7 @@ router.get("/contact", (req, res) => {
     res.send(result);
   });
 });
+
 router.delete("/contact/:id", (req, res) => {
   ContactModel.deleteOne({ _id: req.params.id }).then((result) => {
     res.send(result);
@@ -55,22 +56,11 @@ router.get("/appointment", (request, res) => {
     res.send(result);
   });
 });
+
 router.delete("/appointment/:id", (req, res) => {
   AppointmentModel.deleteOne({ _id: req.params.id }).then((result) => {
     res.send(result);
   });
 });
-
-// Zoom Signature
-router.post("/signature/", (req, res) => {
-  debugger
-  const timestamp = new Date().getTime() - 30000
-  const msg = Buffer.from(process.env.ZOOM_JWT_API_KEY + req.body.meetingNumber + timestamp + req.body.role).toString('base64')
-  const hash = crypto.createHmac('sha256', process.env.ZOOM_JWT_API_SECRET).update(msg).digest('base64')
-  const signature = Buffer.from(`${process.env.ZOOM_JWT_API_KEY}.${req.body.meetingNumber}.${timestamp}.${req.body.role}.${hash}`).toString('base64')
-  res.json({
-    signature: signature
-  })
-})
 
 module.exports = router;

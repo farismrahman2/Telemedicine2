@@ -3,10 +3,9 @@ import './blog.css';
 import {data} from './data.js';
 
 const Blog = () => {
-  const [selected,setSelected] =useState(null);
+  const [selected, setSelected] = useState(null);
   const toggle = i => {
-    if(selected === i)
-    {
+    if(selected === i) {
       return setSelected(null); 
     }
 
@@ -14,16 +13,16 @@ const Blog = () => {
   }
 
   return(
-    <div className = "wrapper section__margin" id ='blog'>
+    <div className="wrapper section__margin" id='blog'>
       <h1 className='gradienttext'>Frequently Asked Questions</h1>
-      <div className = "accordion">
-        {data.map((item,i)=>(
-          <div className = "item">
-            <div className= "title" onClick={() => toggle(i)}>
+      <div className="accordion">
+        {data.map((item, i)=>(
+            <div className="item" key={item.id}>
+            <div className="title" onClick={() => toggle(i)}>
               <h2>{item.question}</h2>
               <span>{selected === i ? '-' : '+'}</span>
             </div>
-            <div className = {selected === i ? 'content show' : 'content'}>
+            <div className={selected === i ? 'content show' : 'content'}>
               {item.answer}
             </div>
           </div>
