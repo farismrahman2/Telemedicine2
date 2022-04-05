@@ -1,19 +1,27 @@
-import React from "react";
+import React, {useState} from "react";
 import { useForm } from "react-hook-form";
 import { AnimatePresence, motion } from 'framer-motion';
 import "react-datepicker/dist/react-datepicker.css";
 
 
-import axios from "axios";
+
 
 import "./signup.css"
 
 const Signup = ({ showModal, setShowModal }) => {
+
+    const [FirstName, setFirst] = useState('');
+    const [LastName, setLast] = useState('');
+    const [email, setemail] = useState('');
+    const [password, setpassword] = useState('');
+    const [validPwd, setValidPwd] = useState(false);
+    const [passwordCF, setpasscf] = useState(false);
+
   
-  const defaultValues = { ReactDatepicker: new Date() }
+  const defaultValues = { useState: new Array(FirstName,LastName,email,password,passwordCF) }
 
- 
-
+  
+ function postLogin (){};
   var regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
 
 
@@ -24,13 +32,8 @@ const Signup = ({ showModal, setShowModal }) => {
   } = useForm({ defaultValues });
 
   const onSubmit = (data) => {
-    axios({
-      method: "post",
-      url: "http://localhost:3000/app/signup",
-      data
-    });
+    postLogin(JSON.stringify(data))
   };
-
   return (
     <AnimatePresence exitBeforeEnter>
     {showModal && (
@@ -85,6 +88,9 @@ const Signup = ({ showModal, setShowModal }) => {
 
                   <label>Email</label>
                   <input 
+                  class = "email"
+                  id="email"
+                  type="email"
                   placeholder="Enter email"
                   {...register("email", { required: true, pattern: /^\S+@\S+$/i })} />
                   {errors?.email?.type === "required" && <p>This field is required</p>}
@@ -96,7 +102,7 @@ const Signup = ({ showModal, setShowModal }) => {
               <input
               class="password"
               type="password"
-                placeholder = "Enter password"
+              placeholder = "Enter password"
               {...register("password",
               {   required: true,
                   pattern: regularExpression
@@ -115,12 +121,12 @@ const Signup = ({ showModal, setShowModal }) => {
               {...register("passwordCF",
               {   required: true   
                 })}/>
-                {errors?.passwordCF?.type === "required" && <p>This field is required</p>}
-                  {errors?.passwordCF?.type === "password" && (
+                {errors?.passwordCF?.type === "required" }
+                  {errors?.passwordCF?.type === "passwordCF" && (
                         <p>Passwords do not match, try again</p>
                     )}
-          
-              <input className="btn" type="submit" value="Sign up" />
+                
+              <input className="btn" type="submit" value="Sign up"  />
               <button  onClick={() => setShowModal(false)}>Cancel</button>
               
 

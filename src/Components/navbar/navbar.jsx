@@ -6,13 +6,18 @@ import { RiMenu3Line, RiCloseLin } from 'react-icons/ri';
 import logo from '../../assets/logo.png'
 import { AnimatePresence, motion } from 'framer-motion';
 import Signup from '../login/signup';
+;
 
 const Navbar = () => {
   const [showModal,setShowModal]=useState(false);
+  
 
   return <div className='navbar'>
-
+    
+    
   <Signup showModal={showModal} setShowModal ={setShowModal}/>
+  
+  
 < AnimatePresence exitBeforeEnter onExitComplete={()=>setShowModal(false) }/>
     
     <div className='navbar-links'>
@@ -37,10 +42,8 @@ const Navbar = () => {
       </div>
       <div className='navbar-sign'>
 
-        <p>
-
-          Sign in
-        </p>
+      
+ <p> Sign in </p>
         <motion.div className='sign_up'
     whileHover={{duration:'0',delay:0,scale:1.3}}
     initial={{x:'0'}}
