@@ -78,7 +78,7 @@ const Signup = ({ showModal, setShowModal }) => {
                                 onClick={signInWithFacebook}
                             >Register with Facebook
                             </button>
-                            <h1 class='user__title'> Register with Email </h1>
+                            
 
                             <label>Full Name</label>
                             <TextField

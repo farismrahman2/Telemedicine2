@@ -94,8 +94,7 @@ const registerWithEmailAndPassword = async (name, email, password) => {
       email,
     });
   } catch (err) {
-    console.error(err);
-    alert(err.message);
+    
   }
 };
 
