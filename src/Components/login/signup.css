@@ -152,4 +152,23 @@ form {
     padding: 10px 20px;
     border-radius: 4px;
   }
+  .register__btn {
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border: none;
+    color: white;
+    background-color: black;
+  }
   
+  .register__google {
+    background-color: #4285f4;
+  }
+
+  .register__google [type="button"]:hover{
+    background: #a624b8;
+    transition: 0.3s all;
+    transform: translateY(3px);
+    border: 1px solid transparent;
+    opacity: 0.8;
+  }

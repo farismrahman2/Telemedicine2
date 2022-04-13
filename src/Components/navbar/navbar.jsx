@@ -9,7 +9,6 @@ import Signup from '../login/signup';
 ;
 
 const Navbar = () => {
-<<<<<<< HEAD
   const [showModal,setShowModal]=useState(false);
   
 
@@ -59,47 +58,6 @@ const Navbar = () => {
 
     </div>
   </div>;
-=======
-	const [showModal, setShowModal] = useState(false);
-
-	return <div className='navbar'>
-		<Signup showModal={showModal} setShowModal={setShowModal} />
-		<AnimatePresence exitBeforeEnter onExitComplete={() => setShowModal(false)} />
-		<div className='navbar-links'>
-			<div >
-				<h3 className='navbar-links_logo'>
-					<img src={logo} alt="logo" width={40}></img>
-				</h3>
-			</div>
-			<div className='navbar_links_container'>
-				<p><a href='#home'>Home</a></p>
-				<p><a href='/control'>Admin</a></p>
-				<p><a href='/call'>Conference</a></p>
-				<ScrollIntoView selector="#what">
-					<p><a href='#whatWe'>What We Treat</a></p>
-				</ScrollIntoView>
-				<p><a href='#possibility'> Help</a></p>
-				<ScrollIntoView selector="#contactus">
-					<p><a href='#contactus'>  Contact Us </a></p>
-				</ScrollIntoView>
-				<p><a href='#home'> </a></p>
-			</div>
-			<div className='navbar-sign'>
-				<p>
-					Sign in
-				</p>
-				<motion.div className='sign_up'
-					whileHover={{ duration: '0', delay: 0, scale: 1.3 }}
-					initial={{ x: '0' }}
-					animate={{ x: '0' }}
-				>
-					<button onClick={() => setShowModal(true)}>Sign up</button>
-				</motion.div>
-			</div>
-			<div className='navbar-menu'></div>
-		</div>
-	</div>;
->>>>>>> cb19ba7b4d966d5e173606589794fc76d3836755
 };
 
 export default Navbar
