@@ -6,7 +6,7 @@ import './navbar.css';
 import logo from '../../assets/logo.png'
 import { AnimatePresence, motion } from 'framer-motion';
 import Signup from '../login/signup';
-;
+import Signin from '../login/signin';
 
 const Navbar = () => {
   const [showModal,setShowModal]=useState(false);
@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return <div className='navbar'>
     
-    
+  <Signin showModal={showModal} setShowModal ={setShowModal}/>
   <Signup showModal={showModal} setShowModal ={setShowModal}/>
   
   
@@ -43,7 +43,16 @@ const Navbar = () => {
       <div className='navbar-sign'>
 
       
- <p> Sign in </p>
+      <motion.div className='sign_in'
+    whileHover={{duration:'0',delay:0,scale:1.3}}
+    initial={{x:'0'}}
+    animate={{x:'0'}}
+    >
+    
+    <button onClick={()=> setShowModal(true)}>Sign in</button>
+    </motion.div>
+  <p></p>
+
         <motion.div className='sign_up'
     whileHover={{duration:'0',delay:0,scale:1.3}}
     initial={{x:'0'}}

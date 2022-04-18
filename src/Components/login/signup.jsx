@@ -79,7 +79,7 @@ const Signup = ({ showModal, setShowModal }) => {
                             >Register with Facebook
                             </button>
                             
-
+                            <h1 class='user__title'> Register with email </h1>
                             <label>Full Name</label>
                             <TextField
                                 type="text"
