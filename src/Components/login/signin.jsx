@@ -19,7 +19,7 @@ const Signin = ({ showModal, setShowModal }) => {
  
 
   function postLogin() { };
-  var regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+  //var regularExpression = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
 
 
 
@@ -83,7 +83,7 @@ const Signin = ({ showModal, setShowModal }) => {
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
                 required= {true}
-                pattern= {regularExpression}
+                
                   />
               {error?.password?.type === "required" && <p>This field is required</p>}
               {error?.password?.type === "pattern" && (
