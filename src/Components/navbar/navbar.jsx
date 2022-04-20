@@ -10,11 +10,11 @@ import Signin from '../login/signin';
 
 const Navbar = () => {
   const [showModal,setShowModal]=useState(false);
-  
+  const[showModal2, setShowModal2] = useState(false);
 
   return <div className='navbar'>
     
-  <Signin showModal={showModal} setShowModal ={setShowModal}/>
+  <Signin showModal={showModal2} setShowModal ={setShowModal2}/>
   <Signup showModal={showModal} setShowModal ={setShowModal}/>
   
   
@@ -49,7 +49,7 @@ const Navbar = () => {
     animate={{x:'0'}}
     >
     
-    <button onClick={()=> setShowModal(true)}>Sign in</button>
+    <button onClick={()=> setShowModal2(true)}>Sign in</button>
     </motion.div>
   <p></p>
 
