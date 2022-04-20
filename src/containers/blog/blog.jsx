@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './blog.css';
 import {data} from './data.js';
-
+import { Link } from 'react-router-dom';
 const Blog = () => {
   const [selected, setSelected] = useState(null);
   const toggle = i => {
@@ -27,6 +27,11 @@ const Blog = () => {
             </div>
           </div>
   ))}
+  <Link to = "newdata" target = "_blank"> 
+  <button for ="btnBox" class = "btn-area">  
+               <span class = "btn1"> Show more </span>
+               </button> 
+               </Link> 
       </div>
     </div>
   )

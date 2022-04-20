@@ -7,7 +7,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import { Admin, Zoom } from './containers';
+import { Admin, Zoom, Blog2 } from './containers';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,7 +17,11 @@ ReactDOM.render(
         <Route path='/control' element={<Admin />} />
         <Route path="/call" element={<Zoom />} />
         <Route path="/" element={<App />}>
-      </Route>
+        </Route>
+        <Route path="/" element={<newdata/>} />
+        <Route path="/newdata" element={<Blog2/>}>
+          </Route>
+      
     </Routes>
   </BrowserRouter>,
   </React.StrictMode>,
